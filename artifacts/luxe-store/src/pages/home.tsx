@@ -4,7 +4,7 @@ import { CategoryCard } from "@/components/category-card";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@assets/generated_images/hero_boy.png";
+import heroImage from "@assets/generated_images/hero_boy_realistic.png";
 
 export default function Home() {
   const { data: settings } = useGetSettings();

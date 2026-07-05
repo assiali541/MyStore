@@ -1,8 +1,73 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "MlWY-nUnJcYVBYVMn3iaE"
 uri = "file://attached_assets/generated_images/hero_boy.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "9Pp8oBHukVFSwk6ZoSSJh"
+uri = "file://attached_assets/generated_images/hero_boy_realistic.png"
+type = "image"
+title = "generated_image"
+
+[[outputs]]
+id = "u94n_JrdBuMMFZd7QMT1g"
+uri = "file://attached_assets/stock_images/man_trench_coat_paris_1.jpg"
+type = "image"
+title = "man trench coat Paris Eiffel Tower"
+
+[[outputs]]
+id = "4w0O1ukomcvJ4lPeVGmVT"
+uri = "file://attached_assets/stock_images/man_trench_coat_paris_2.jpg"
+type = "image"
+title = "man trench coat Paris Eiffel Tower"
+
+[[outputs]]
+id = "x1z3OHqIB4_RsYVKKyXaw"
+uri = "file://attached_assets/stock_images/man_trench_coat_paris_3.jpg"
+type = "image"
+title = "man trench coat Paris Eiffel Tower"
+
+[[outputs]]
+id = "BPnMyil4f9EwR3LTXW5S4"
+uri = "file://attached_assets/stock_images/man_trench_coat_paris_4.jpg"
+type = "image"
+title = "man trench coat Paris Eiffel Tower"
+
+[[outputs]]
+id = "7PxhN5hR0BXbXSnE_FsKM"
+uri = "file://attached_assets/stock_images/man_trench_coat_paris_5.jpg"
+type = "image"
+title = "man trench coat Paris Eiffel Tower"
+
+[[outputs]]
+id = "Iibkih-yu0_wVWBskRWVy"
+uri = "file://attached_assets/stock_images/man_fashion_portrait_1.jpg"
+type = "image"
+title = "man fashion portrait trench coat street style"
+
+[[outputs]]
+id = "WELCMgkAc1Kn6iEWr6HS_"
+uri = "file://attached_assets/stock_images/man_fashion_portrait_2.jpg"
+type = "image"
+title = "man fashion portrait trench coat street style"
+
+[[outputs]]
+id = "MrXgYRz2H48dGOS4a5YYN"
+uri = "file://attached_assets/stock_images/man_fashion_portrait_3.jpg"
+type = "image"
+title = "man fashion portrait trench coat street style"
+
+[[outputs]]
+id = "dGvBUWQWDR9YyL9jnaaib"
+uri = "file://attached_assets/stock_images/man_fashion_portrait_4.jpg"
+type = "image"
+title = "man fashion portrait trench coat street style"
+
+[[outputs]]
+id = "Ab5X9vWkNhEbBYHKResDY"
+uri = "file://attached_assets/stock_images/man_fashion_portrait_5.jpg"
+type = "image"
+title = "man fashion portrait trench coat street style"
