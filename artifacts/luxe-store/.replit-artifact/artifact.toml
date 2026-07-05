@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Luxe Clothes Store"
+version = "1.0.0"
+id = "artifacts/luxe-store"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21248
+
+[services.development]
+run = "pnpm --filter @workspace/luxe-store run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/luxe-store", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/luxe-store/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21248"
+BASE_PATH = "/"

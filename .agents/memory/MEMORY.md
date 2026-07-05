@@ -1,0 +1,1 @@
+- [Wouter v3 wildcard routes](wouter-v3-wildcards.md) — bare suffix wildcards like `"/admin*"` silently fail to match nested paths; use explicit routes or `:rest*`.
