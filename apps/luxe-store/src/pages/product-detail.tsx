@@ -248,10 +248,7 @@ export default function ProductDetail() {
             </div>
             
             {/* Shipping Info */}
-            <div className="mt-12 pt-8 border-t border-border space-y-4 text-sm text-muted-foreground font-light">
-              <p>Free complimentary shipping on orders over $500.</p>
-              <p>Returns accepted within 14 days of delivery. <Link href="#" className="underline hover:text-primary">Read policy</Link>.</p>
-            </div>
+            
           </div>
         </div>
       </div>
