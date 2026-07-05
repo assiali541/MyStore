@@ -117,7 +117,7 @@ export default function AdminProducts() {
       const form = new FormData();
       form.append('file', file);
       
-      const res = await fetch('/api/admin/upload', {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/admin/upload`, {
         method: 'POST',
         headers: { Authorization: `Bearer ${token}` },
         body: form,
