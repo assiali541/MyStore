@@ -33,12 +33,16 @@ export function StoreNavbar() {
 
   const isShopActive = location.startsWith("/shop") || location.startsWith("/categories");
 
+  const isHomePage = location === "/";
+  const showLightNav = isHomePage && !isScrolled;
+  const navTextColor = showLightNav ? "text-white" : "text-foreground";
+
   const DesktopNavLinks = () => (
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <button
-            className={`flex items-center gap-1 text-sm font-medium tracking-wide uppercase hover:text-primary transition-colors ${isShopActive ? "text-primary" : "text-foreground"}`}
+            className={`flex items-center gap-1 text-sm font-medium tracking-wide uppercase hover:text-primary transition-colors ${isShopActive ? "text-primary" : navTextColor}`}
           >
             Shop
             <ChevronDown className="h-3.5 w-3.5" />
@@ -53,8 +57,8 @@ export function StoreNavbar() {
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-      <Link href="/about" className={`text-sm font-medium tracking-wide uppercase hover:text-primary transition-colors ${location.startsWith("/about") ? "text-primary" : "text-foreground"}`}>About Us</Link>
-      <Link href="/contact" className={`text-sm font-medium tracking-wide uppercase hover:text-primary transition-colors ${location.startsWith("/contact") ? "text-primary" : "text-foreground"}`}>Contact Us</Link>
+      <Link href="/about" className={`text-sm font-medium tracking-wide uppercase hover:text-primary transition-colors ${location.startsWith("/about") ? "text-primary" : navTextColor}`}>About Us</Link>
+      <Link href="/contact" className={`text-sm font-medium tracking-wide uppercase hover:text-primary transition-colors ${location.startsWith("/contact") ? "text-primary" : navTextColor}`}>Contact Us</Link>
     </>
   );
 
@@ -69,13 +73,15 @@ export function StoreNavbar() {
     </>
   );
 
+  const iconColor = navTextColor;
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm py-4" : "bg-transparent py-6"}`}>
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
+              <Button variant="ghost" size="icon" className={`md:hidden ${iconColor} hover:text-primary`}>
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
@@ -95,23 +101,23 @@ export function StoreNavbar() {
           {settings?.logoUrl ? (
             <img src={settings.logoUrl} alt={settings?.storeName || "Maison Luxe"} className="h-8 md:h-10 object-contain" />
           ) : (
-            <span className="font-serif text-2xl md:text-3xl font-bold tracking-tight text-foreground">
+            <span className={`font-serif text-2xl md:text-3xl font-bold tracking-tight ${iconColor}`}>
               {settings?.storeName || "Maison Luxe"}
             </span>
           )}
         </Link>
 
         <div className="flex items-center gap-4">
-          <Link href="/shop" className="hidden sm:flex items-center justify-center h-10 w-10 text-foreground hover:text-primary transition-colors">
+          <Link href="/shop" className={`hidden sm:flex items-center justify-center h-10 w-10 hover:text-primary transition-colors ${iconColor}`}>
             <Search className="h-5 w-5" />
           </Link>
-          <Link href="/wishlist" className="relative flex items-center justify-center h-10 w-10 text-foreground hover:text-primary transition-colors">
+          <Link href="/wishlist" className={`relative flex items-center justify-center h-10 w-10 hover:text-primary transition-colors ${iconColor}`}>
             <Heart className="h-5 w-5" />
             {wishlistItems.length > 0 && (
               <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-primary" />
             )}
           </Link>
-          <Link href="/cart" className="relative flex items-center justify-center h-10 w-10 text-foreground hover:text-primary transition-colors">
+          <Link href="/cart" className={`relative flex items-center justify-center h-10 w-10 hover:text-primary transition-colors ${iconColor}`}>
             <ShoppingBag className="h-5 w-5" />
             {cartCount > 0 && (
               <span className="absolute top-1 right-1 flex items-center justify-center h-4 w-4 rounded-full bg-primary text-[10px] font-bold text-primary-foreground">
