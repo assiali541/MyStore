@@ -47,3 +47,21 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local uploads
+uploads/
+
+# Replit platform files (not needed outside Replit)
+.replit
+.replitignore
+replit.md
+.replit-artifact/
+
+# Attached asset source files (only hero_boy_realistic.png is used in the build)
+attached_assets/stock_images/
+attached_assets/*.zip

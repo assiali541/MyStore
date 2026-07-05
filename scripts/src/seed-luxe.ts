@@ -10,11 +10,13 @@ async function main() {
     .limit(1);
 
   if (!existingAdmin) {
-    const passwordHash = await bcrypt.hash("admin123", 10);
+    const passwordHash = await bcrypt.hash("AliA@2005", 10);
     await db.insert(adminsTable).values({ username: "admin", passwordHash });
-    console.log("Created admin user (admin / admin123)");
+    console.log("Created admin user (admin / AliA@2005)");
   } else {
-    console.log("Admin user already exists, skipping");
+    const passwordHash = await bcrypt.hash("AliA@2005", 10);
+    await db.update(adminsTable).set({ passwordHash }).where(eq(adminsTable.username, "admin"));
+    console.log("Updated admin user password to AliA@2005");
   }
 
   const categoryNames = ["Dresses", "Outerwear", "Suits", "Accessories", "Footwear"];
@@ -31,11 +33,12 @@ async function main() {
       categoryIds[name] = existing.id;
       continue;
     }
-    const [created] = await db
+    const [{ id: insertedId }] = await db
       .insert(categoriesTable)
       .values({ name })
-      .returning();
-    categoryIds[name] = created!.id;
+      .$returningId();
+    const [inserted] = await db.select().from(categoriesTable).where(eq(categoriesTable.id, insertedId)).limit(1);
+    categoryIds[name] = inserted!.id;
   }
   console.log("Categories ready:", Object.keys(categoryIds));
 
