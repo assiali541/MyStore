@@ -4,7 +4,7 @@ import { CategoryCard } from "@/components/category-card";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@assets/generated_images/hero.jpg";
+import heroImage from "@assets/generated_images/hero_boy.png";
 
 export default function Home() {
   const { data: settings } = useGetSettings();
@@ -46,7 +46,7 @@ export default function Home() {
       <section className="py-24 bg-secondary/30 text-center px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-2xl md:text-3xl text-primary font-medium leading-relaxed">
-            "True luxury is not about being noticed, but being remembered. Our collections are crafted for those who appreciate the quiet language of exceptional quality."
+            "True luxury is not about being noticed, but being remembered. Every piece we sell is 100% authentic, sourced and curated for those who appreciate the quiet language of exceptional quality."
           </h2>
         </div>
       </section>
@@ -93,7 +93,7 @@ export default function Home() {
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 gap-y-12">
+          <div className="grid grid-cols-2 gap-6 gap-y-12">
             {featuredProducts.products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

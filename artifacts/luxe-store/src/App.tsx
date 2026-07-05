@@ -1,8 +1,9 @@
+import { useEffect } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Toaster } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
-import { Route, Switch, Router as WouterRouter } from 'wouter';
+import { Route, Switch, Router as WouterRouter, useLocation } from 'wouter';
 
 // Contexts
 import { CartProvider } from '@/contexts/cart-context';
@@ -81,22 +82,35 @@ function AdminRoutes() {
   );
 }
 
+function ScrollToTop() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return null;
+}
+
 function Router() {
   return (
-    <Switch>
-      {/* Admin login has no layout wrapper */}
-      <Route path="/admin/login" component={AdminLogin} />
-      {/* Admin namespace gets priority over the store catch-all */}
-      <Route path="/admin" component={AdminRoutes} />
-      <Route path="/admin/dashboard" component={AdminRoutes} />
-      <Route path="/admin/products" component={AdminRoutes} />
-      <Route path="/admin/categories" component={AdminRoutes} />
-      <Route path="/admin/orders" component={AdminRoutes} />
-      <Route path="/admin/coupons" component={AdminRoutes} />
-      <Route path="/admin/settings" component={AdminRoutes} />
-      {/* Everything else falls back to store */}
-      <Route component={StoreRoutes} />
-    </Switch>
+    <>
+      <ScrollToTop />
+      <Switch>
+        {/* Admin login has no layout wrapper */}
+        <Route path="/admin/login" component={AdminLogin} />
+        {/* Admin namespace gets priority over the store catch-all */}
+        <Route path="/admin" component={AdminRoutes} />
+        <Route path="/admin/dashboard" component={AdminRoutes} />
+        <Route path="/admin/products" component={AdminRoutes} />
+        <Route path="/admin/categories" component={AdminRoutes} />
+        <Route path="/admin/orders" component={AdminRoutes} />
+        <Route path="/admin/coupons" component={AdminRoutes} />
+        <Route path="/admin/settings" component={AdminRoutes} />
+        {/* Everything else falls back to store */}
+        <Route component={StoreRoutes} />
+      </Switch>
+    </>
   );
 }
 

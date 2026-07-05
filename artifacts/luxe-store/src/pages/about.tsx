@@ -25,7 +25,16 @@ export default function About() {
           </p>
           <p className="text-muted-foreground font-light leading-relaxed text-lg whitespace-pre-line">
             {settings?.aboutText ||
-              "Founded on the belief that exceptional quality speaks quietly, we curate pieces for those who understand the language of understated elegance. Every garment in our collection is chosen with intention — crafted with mastery, designed to last, and made to be worn with confidence.\n\nWe partner with ateliers who share our devotion to detail, sourcing the finest materials and honoring time-tested techniques. The result is a wardrobe that transcends trends: timeless, considered, and unmistakably refined."}
+              "We source and sell 100% authentic clothing — every piece in our collection is guaranteed genuine, chosen with intention and crafted with mastery. No replicas, no compromises: just real, high-quality garments for those who understand the language of understated elegance.\n\nWe partner with trusted suppliers who share our devotion to authenticity, sourcing the finest materials and honoring time-tested techniques. The result is a wardrobe that transcends trends: timeless, considered, and unmistakably genuine."}
+          </p>
+        </div>
+      </section>
+
+      <section className="pb-24 px-4 md:px-6">
+        <div className="max-w-3xl mx-auto text-center border border-border/60 rounded-sm p-8">
+          <h3 className="font-serif text-xl md:text-2xl text-foreground font-medium mb-3">Our Policy</h3>
+          <p className="text-muted-foreground font-light leading-relaxed">
+            All sales are final. We do not offer refunds or exchanges on any purchase, so please review your order carefully before checking out.
           </p>
         </div>
       </section>

@@ -20,7 +20,7 @@ export function StoreFooter() {
               )}
             </Link>
             <p className="text-background/70 max-w-sm font-light leading-relaxed">
-              {settings?.aboutText || "Discover the epitome of elegance. Curated pieces for the discerning individual, designed with intention and crafted with mastery."}
+              {settings?.aboutText || "100% authentic clothing, curated for the discerning individual, designed with intention and crafted with mastery."}
             </p>
           </div>
           
@@ -72,7 +72,7 @@ export function StoreFooter() {
         
         <div className="mt-16 md:mt-24 pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs font-light text-background/50">
-            &copy; {new Date().getFullYear()} {settings?.storeName || "Maison Luxe"}. All rights reserved.
+            &copy; {new Date().getFullYear()} {settings?.storeName || "Maison Luxe"}. All rights reserved. All items are 100% authentic. All sales are final — no refunds or exchanges.
           </p>
           <div className="flex items-center gap-4 text-xs font-light text-background/50">
             <Link href="/admin/login" className="hover:text-primary transition-colors">Admin Access</Link>
