@@ -163,6 +163,7 @@
 }
 
 .dark {
+  color-scheme: dark;
   --button-outline: rgba(255, 255, 255, 0.1);
   --badge-outline: rgba(255, 255, 255, 0.05);
 

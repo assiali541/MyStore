@@ -122,7 +122,7 @@ export default function AdminSettings() {
 
       <form onSubmit={handleSubmit} className="space-y-8">
         <div className="bg-card border border-border rounded-lg p-6 space-y-6">
-          <h2 className="font-serif text-xl border-b border-border pb-2">Brand Identity</h2>
+          <h2 className="font-serif text-xl text-foreground border-b border-border pb-2">Brand Identity</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-2">
@@ -195,7 +195,7 @@ export default function AdminSettings() {
         </div>
 
         <div className="bg-card border border-border rounded-lg p-6 space-y-6">
-          <h2 className="font-serif text-xl border-b border-border pb-2">Contact & Social</h2>
+          <h2 className="font-serif text-xl text-foreground border-b border-border pb-2">Contact & Social</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
@@ -237,7 +237,7 @@ export default function AdminSettings() {
         </div>
 
         <div className="bg-card border border-border rounded-lg p-6 space-y-6">
-          <h2 className="font-serif text-xl border-b border-border pb-2">Shipping Policies</h2>
+          <h2 className="font-serif text-xl text-foreground border-b border-border pb-2">Shipping Policies</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">

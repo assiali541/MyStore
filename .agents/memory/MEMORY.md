@@ -1,1 +1,2 @@
 - [Wouter v3 wildcard routes](wouter-v3-wildcards.md) — bare suffix wildcards like `"/admin*"` silently fail to match nested paths; use explicit routes or `:rest*`.
+- [Dark-scope CSS variable inheritance gotcha](dark-scope-text-inheritance.md) — text with no explicit color class can render near-invisible when `.dark` is applied on a div nested inside `<body>` rather than on `<body>`/`<html>`.
