@@ -72,12 +72,6 @@ export default function AdminSettings() {
       
       const data = await res.json();
       setFormData(prev => ({ ...prev, [field]: data.url }));
-      if (field === "logoUrl") {
-  const favicon = document.querySelector("link[rel='icon']") as HTMLLinkElement;
-  if (favicon) {
-    favicon.href = data.url;
-  }
-}
       toast.success("Image uploaded", { id: toastId });
     } catch (err: any) {
       toast.error(err.message || "Failed to upload image");
