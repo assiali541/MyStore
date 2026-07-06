@@ -246,6 +246,9 @@ export default function ProductDetail() {
                 <Heart className={`h-5 w-5 ${isWishlisted ? 'fill-primary' : ''}`} />
               </Button>
             </div>
+            <p className="mt-5 border-t border-border pt-4 text-xs text-muted-foreground tracking-wide">
+             <span className="font-semibold text-foreground">Store Policy:</span> All sales are final. No refunds or exchanges.
+              </p>
             
             {/* Shipping Info */}
             
