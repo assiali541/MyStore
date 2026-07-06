@@ -102,25 +102,6 @@ export default function Home() {
       )}
 
       {/* Newsletter */}
-      <section className="py-24 bg-primary text-primary-foreground px-4 text-center">
-        <div className="max-w-xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">Join the Atelier</h2>
-          <p className="text-primary-foreground/80 mb-8 font-light">
-            Subscribe to receive exclusive access to new collections, private sales, and sartorial inspiration.
-          </p>
-          <form className="flex flex-col sm:flex-row max-w-md mx-auto gap-2" onSubmit={(e) => e.preventDefault()}>
-            <input 
-              type="email" 
-              placeholder="Your email address" 
-              className="flex-1 bg-transparent border-b border-primary-foreground/30 px-0 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-primary-foreground transition-colors rounded-none"
-              required
-            />
-            <Button type="submit" variant="outline" className="bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary rounded-none mt-4 sm:mt-0 px-8">
-              Subscribe
-            </Button>
-          </form>
-        </div>
-      </section>
     </div>
   );
 }
