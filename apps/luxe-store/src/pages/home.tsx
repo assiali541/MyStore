@@ -21,7 +21,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <img 
             src={heroUrl} 
-            alt="Urban District LBHero" 
+            alt="Urban District LB LBHero" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/30" />
@@ -29,7 +29,7 @@ export default function Home() {
         
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
           <span className="text-white/80 tracking-[0.2em] uppercase text-sm mb-6 block fade-in-up" style={{animationDelay: "0.1s"}}>
-            {settings?.storeName || "Urban District"}
+            {settings?.storeName || "Urban District LB"}
           </span>
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-medium leading-tight mb-8 fade-in-up" style={{animationDelay: "0.2s"}}>
             The Art of<br />Understated Elegance

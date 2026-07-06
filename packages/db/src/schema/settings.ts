@@ -4,7 +4,7 @@ import { z } from "zod/v4";
 
 export const settingsTable = mysqlTable("settings", {
   id: int("id").autoincrement().primaryKey(),
-  storeName: varchar("store_name", { length: 255 }).notNull().default("Urban District"),
+  storeName: varchar("store_name", { length: 255 }).notNull().default("Urban District LB"),
   logoUrl: text("logo_url"),
   email: text("email"),
   whatsapp: text("whatsapp"),

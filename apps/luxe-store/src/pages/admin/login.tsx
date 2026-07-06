@@ -40,7 +40,7 @@ export default function AdminLogin() {
           Atelier Admin
         </h2>
         <p className="mt-2 text-sm text-muted-foreground uppercase tracking-widest">
-          Urban District LBStore Management
+          Urban District LB LBStore Management
         </p>
       </div>
 

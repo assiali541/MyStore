@@ -99,10 +99,10 @@ export function StoreNavbar() {
 
         <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
           {settings?.logoUrl ? (
-            <img src={settings.logoUrl} alt={settings?.storeName || "Urban District"} className="h-8 md:h-10 object-contain" />
+            <img src={settings.logoUrl} alt={settings?.storeName || "Urban District LB"} className="h-8 md:h-10 object-contain" />
           ) : (
             <span className={`font-serif text-2xl md:text-3xl font-bold tracking-tight ${iconColor}`}>
-              {settings?.storeName || "Urban District"}
+              {settings?.storeName || "Urban District LB"}
             </span>
           )}
         </Link>
