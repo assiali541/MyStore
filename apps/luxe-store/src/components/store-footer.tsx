@@ -12,10 +12,10 @@ export function StoreFooter() {
           <div className="md:col-span-2">
             <Link href="/" className="inline-block mb-6">
               {settings?.logoUrl ? (
-                <img src={settings.logoUrl} alt={settings?.storeName || "Maison Luxe"} className="h-8 object-contain brightness-0 invert" />
+                <img src={settings.logoUrl} alt={settings?.storeName || "Urban District"} className="h-8 object-contain brightness-0 invert" />
               ) : (
                 <span className="font-serif text-3xl font-bold tracking-tight text-primary">
-                  {settings?.storeName || "Maison Luxe"}
+                  {settings?.storeName || "Urban District"}
                 </span>
               )}
             </Link>
@@ -72,7 +72,7 @@ export function StoreFooter() {
         
         <div className="mt-16 md:mt-24 pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs font-light text-background/50">
-            &copy; {new Date().getFullYear()} {settings?.storeName || "Maison Luxe"}. All rights reserved. All items are 100% authentic. All sales are final — no refunds or exchanges.
+            &copy; {new Date().getFullYear()} {settings?.storeName || "Urban District"}. All rights reserved. All items are 100% authentic. All sales are final — no refunds or exchanges.
           </p>
           <div className="flex items-center gap-4 text-xs font-light text-background/50">
             <Link href="/admin/login" className="hover:text-primary transition-colors">Admin Access</Link>

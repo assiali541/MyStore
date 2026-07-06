@@ -41,7 +41,7 @@ export function AdminLayout({ children }: { children: ReactNode }) {
     <>
       <div className="mb-8 px-2">
         <h2 className="font-serif text-xl font-bold text-sidebar-primary tracking-tight">
-          {settings?.storeName || "Maison Luxe"}
+          {settings?.storeName || "Urban District"}
         </h2>
         <p className="text-xs text-sidebar-foreground/50 uppercase tracking-widest mt-1">Atelier</p>
       </div>
@@ -109,7 +109,7 @@ export function AdminLayout({ children }: { children: ReactNode }) {
       {/* Mobile Header */}
       <header className="md:hidden bg-sidebar text-sidebar-foreground h-16 flex items-center justify-between px-4 border-b border-sidebar-border dark">
         <h2 className="font-serif text-lg font-bold text-sidebar-primary">
-          {settings?.storeName || "Maison Luxe"}
+          {settings?.storeName || "Urban District"}
         </h2>
         <Sheet>
           <SheetTrigger asChild>

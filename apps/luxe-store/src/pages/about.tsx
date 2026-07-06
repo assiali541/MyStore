@@ -13,7 +13,7 @@ export default function About() {
             Our Story
           </span>
           <h1 className="font-serif text-4xl md:text-6xl text-foreground font-medium leading-tight">
-            About {settings?.storeName || "Maison Luxe"}
+            About {settings?.storeName || "Urban District"}
           </h1>
         </div>
       </section>
