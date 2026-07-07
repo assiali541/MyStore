@@ -74,9 +74,6 @@ export function StoreFooter() {
           <p className="text-xs font-light text-background/50">
             &copy; {new Date().getFullYear()} {settings?.storeName || "Urban District LB"}. All rights reserved. All items are 100% authentic. All sales are final — no refunds or exchanges.
           </p>
-          <div className="flex items-center gap-4 text-xs font-light text-background/50">
-            <Link href="/admin/login" className="hover:text-primary transition-colors">Admin Access</Link>
-          </div>
         </div>
       </div>
     </footer>
